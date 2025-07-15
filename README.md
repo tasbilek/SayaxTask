@@ -6,20 +6,20 @@ This project is a full-stack web application created for demonstration purposes.
 
 ## 📚 Table of Contents
 
-- 📁 [Project Structure](#project-structure)  
-- 🚀 [Setup](#setup)
-  - ⚙️ [Prerequisites](#prerequisites)
-  - ▶️ [Running Locally](#running-locally)
-- 💻 [Tech Stack](#tech-stack)
-- ✅ [Features](#features)
-- 🧱 [Architecture](#architecture)
-- 🐳 [Running Database with Docker](#running-database-with-docker)
-  - 🏃 [Running SQL Server](#running-sql-server)
-  - ⚙️ [SQL Server Configuration](#sql-server-configuration)
-  - 🔧 [CodeFirst with Dotnet CLI](#codefirst-with-dotnet-cli)
-- 🐋 [Docker Compose](#docker-compose)
-- 👨‍💻 [Developer](#developer)
-- 📄 [License](#license)
+- 📁 [Project Structure](#-project-structure)  
+- 🚀 [Setup](#-setup)
+  - ⚙️ [Prerequisites](#-prerequisites)
+  - ▶️ [Running Locally](#-running-locally)
+- 💻 [Tech Stack](#-tech-stack)
+- ✅ [Features](#-features)
+- 🧱 [Architecture](#-architecture)
+- 🐳 [Running Database with Docker](#-running-database-with-docker)
+  - 🏃 [Running SQL Server](#-running-sql-server)
+  - ⚙️ [SQL Server Configuration](#-sql-server-configuration)
+  - 🔧 [CodeFirst with Dotnet CLI](#-codefirst-with-dotnet-cli)
+- 🐋 [Docker Compose](#-docker-compose)
+- 👨‍💻 [Developer](#-developer)
+- 📄 [License](#-license)
 
 ---
 
