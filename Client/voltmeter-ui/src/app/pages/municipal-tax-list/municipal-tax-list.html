@@ -1,0 +1,27 @@
+<div class="from-group mt-5">
+    <h3>BTV Listesi</h3>
+    <table class="table table-hover mt-3">
+        <thead>
+            <tr>
+                <th>Sayaç No</th>
+                <th>Fatura Dönemi</th>
+                <th>Belediye</th>
+                <th>Tarife</th>
+                <th>BTV Oranı</th>
+                <th>Toplam Tutar</th>
+                <th>BTV Tutarı</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let municipalTax of municipalTaxes;">
+                <td>{{municipalTax.meterNo}}</td>
+                <td>{{municipalTax.invoicePeriod}}</td>
+                <td>{{municipalTax.municipalName}}</td>
+                <td>{{municipalTax.tariffName}}</td>
+                <td>{{municipalTax.localTaxDisplay}}</td>
+                <td>{{municipalTax.totalAmount | currency:'TRY':'symbol':'1.2-2'}}</td>
+                <td>{{municipalTax.totalLocalTax | currency:'TRY':'symbol':'1.2-2'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

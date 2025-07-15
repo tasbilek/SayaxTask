@@ -1,0 +1,21 @@
+export class InvoiceModel {
+    meterId: string = "";
+    meterNo: string = "";
+    discount: number = 0;
+    commission: number = 0;
+    discountDisplay: string = "";
+    commissionDisplay: string = "";
+    totalConsumption: number = 0;
+    totalPtfAmount: number = 0;
+    totalYekAmount: number = 0;
+    totalEnergyTariffAmount: number = 0;
+    totalDistributionTariffAmount: number = 0;
+    totalAmount: number = 0;
+    totalAmountWithVat: number = 0;
+    vat: number = 0;
+    vatDisplay: string = "";
+    period: string = "";
+    tariff: number = 0;
+    tariffName: string = "";
+    salesMethod: number = 0;
+}

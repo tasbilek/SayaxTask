@@ -1,0 +1,27 @@
+<div class="modal fade" id="invoiceDetailModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Fatura Detayı</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+      </div>
+
+      <div class="modal-body" *ngIf="invoiceDetail">
+        <p><strong>Sayaç No:</strong> {{ invoiceDetail.meterNo }}</p>
+        <p><strong>Dönem:</strong> {{ invoiceDetail.period }}</p>
+        <p><strong>Komisyon:</strong> {{ invoiceDetail.commission && invoiceDetail.commission > 1 ? (invoiceDetail.commission | currency:'TRY':'symbol':'1.2-2') : invoiceDetail.commissionDisplay}}</p>
+        <p><strong>İndirim:</strong> {{  invoiceDetail.discount && invoiceDetail.discount > 1 ? (invoiceDetail.discount | currency:'TRY':'symbol':'1.2-2') : invoiceDetail.discountDisplay}}</p>
+        <p><strong>Tarife:</strong> {{ invoiceDetail.tariffName}}</p>
+        <p><strong>Toplam Tüketim:</strong> {{ invoiceDetail.totalConsumption | number:'1.3-3' }} MWh</p>
+        <p><strong>Toplam PTF Tutarı:</strong> {{ invoiceDetail.salesMethod == 3 ? "-" : invoiceDetail.totalPtfAmount | currency:'TRY':'symbol':'1.2-2' }}</p>
+        <p><strong>Toplam YEK Tutarı:</strong> {{ invoiceDetail.salesMethod == 3 ? "-" : invoiceDetail.totalYekAmount | currency:'TRY':'symbol':'1.2-2' }}</p>
+        <p><strong>Toplam Enerji Tarife Tutarı:</strong> {{ invoiceDetail.salesMethod != 3 ? "-" : invoiceDetail.totalEnergyTariffAmount  | currency:'TRY':'symbol':'1.2-2' }}</p>
+        <p><strong>Toplam Dağıtım Tarife Tutarı:</strong> {{ invoiceDetail.salesMethod != 3 ? "-" : invoiceDetail.totalDistributionTariffAmount  | currency:'TRY':'symbol':'1.2-2' }}</p>
+        <p><strong>Toplam Tutar:</strong> {{ invoiceDetail.totalAmount | currency:'TRY':'symbol':'1.2-2' }}</p>
+        <p><strong>KDV:</strong> {{ invoiceDetail.vatDisplay }}</p>
+        <p><strong>Genel Toplam:</strong> {{ invoiceDetail.totalAmountWithVat | currency:'TRY':'symbol':'1.2-2' }}</p>
+      </div>
+    </div>
+  </div>
+</div>

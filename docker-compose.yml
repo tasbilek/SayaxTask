@@ -1,0 +1,29 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+version: '3.8'
+
+services:
+  voltmeter-api:
+    container_name: voltmeter-api
+    image: voltmeter-api
+    build:
+      context: .
+      dockerfile: Server/src/VoltMeter.WebAPI/Dockerfile
+    ports:
+      - 5001:5001
+    networks:
+      - voltmeter-network
+
+  voltmeter-ui:
+    container_name: voltmeter-ui
+    image: voltmeter-ui
+    build:
+      context: Client/voltmeter-ui
+      dockerfile: Dockerfile
+    ports:
+      - 4200:80
+    networks:
+      - voltmeter-network
+
+networks:
+  voltmeter-network:
+    driver: bridge

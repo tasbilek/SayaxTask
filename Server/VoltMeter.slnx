@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/VoltMeter.Application/VoltMeter.Application.csproj" />
+    <Project Path="src/VoltMeter.Domain/VoltMeter.Domain.csproj" />
+    <Project Path="src/VoltMeter.Infrastructure/VoltMeter.Infrastructure.csproj" />
+    <Project Path="src/VoltMeter.Shared/VoltMeter.Shared.csproj" />
+    <Project Path="src/VoltMeter.WebAPI/VoltMeter.WebAPI.csproj" />
+  </Folder>
+</Solution>

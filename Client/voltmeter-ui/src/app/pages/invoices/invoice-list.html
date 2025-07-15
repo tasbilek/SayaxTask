@@ -1,0 +1,33 @@
+<div class="from-group mt-5">
+    <h3>Faturalar</h3>
+    <table class="table table-hover mt-3">
+        <thead>
+            <tr>
+                <th>Sayaç No</th>
+                <th>Fatura Dönemi</th>
+                <th>Tarife</th>
+                <th>KDV</th>
+                <th>Toplam Tutar</th>
+                <th>Toplam KDV li Tutar</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let invoice of invoices;">
+                <td>{{invoice.meterNo}}</td>
+                <td>{{invoice.period}}</td>
+                <td>{{invoice.tariffName}}</td>
+                <td>{{invoice.vatDisplay}}</td>
+                <td>{{invoice.totalAmount | currency:'TRY':'symbol':'1.2-2' }}</td>
+                <td>{{invoice.totalAmountWithVat | currency:'TRY':'symbol':'1.2-2' }}</td>
+                <td>
+                    <button class="btn btn-outline-primary" (click)="loadInvoiceDetail(invoice.meterId)">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-invoice-detail-modal  *ngIf="selectedInvoice" [invoiceDetail]="selectedInvoice"></app-invoice-detail-modal>
