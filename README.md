@@ -6,7 +6,7 @@ This project is a full-stack web application created for demonstration purposes.
 
 ## 📚 Table of Contents
 
-- 🗂️ [Project Structure](#project-structure)  
+- 📁 [Project Structure](#project-structure)  
 - 🚀 [Setup](#setup)
   - ⚙️ [Prerequisites](#prerequisites)
   - ▶️ [Running Locally](#running-locally)
@@ -23,7 +23,7 @@ This project is a full-stack web application created for demonstration purposes.
 
 ---
 
-## 🗂️ Project Structure
+## 📁 Project Structure
 
 ```
 SayaxTask/
